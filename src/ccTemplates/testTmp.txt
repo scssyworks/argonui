@@ -1,0 +1,9 @@
+import #component# from './#component#';
+
+describe('#component#', function () {
+  before(function () {
+    this.#instance# = new #component#({
+      el: document.body
+    });
+  });
+});

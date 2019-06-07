@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<sly data-sly-use.{{fsdId}}Model="ux-model.js" data-sly-use.lib="/apps/customerhub/components/content/{{fsdId}}/{{fsdId}}-template.html" />
+<sly data-sly-test="${ {{fsdId}}Model.requestURI == {{fsdId}}Model.nodePathWithSelector} || {{fsdId}}Model.requestURI == {{fsdId}}Model.pagePathWithSelector}">
+    <head>
+        <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" />
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="template" content="demoTemplate">
+        <meta name="pageType" content="GenericPageType">
+        <title>{{fsdId}} Component | UpFront</title>
+        <sly data-sly-call="${clientLib.css @ categories='tp.customerhub.vendor'}" />
+        <sly data-sly-call="${clientLib.css @ categories='tp.customerhub.default.en'}" />
+    </head>
+</sly>
+
+<body>
+    <input type="hidden" id="isDummyLayout" value="true" />
+    <div class="tp-container">
+        {{> body}}
+    </div>
+
+    <sly data-sly-test="${ {{fsdId}}Model.requestURI == {{fsdId}}Model.nodePathWithSelector} || {{fsdId}}Model.requestURI == {{fsdId}}Model.pagePathWithSelector}"
+        data-sly-call="${clientLib.js @ categories='tp.customerhub.vendor'}" />
+    <sly data-sly-test="${ {{fsdId}}Model.requestURI == {{fsdId}}Model.nodePathWithSelector} || {{fsdId}}Model.requestURI == {{fsdId}}Model.pagePathWithSelector}"
+        data-sly-call="${clientLib.js @ categories='tp.customerhub.global'}" />
+</body>
+</html>

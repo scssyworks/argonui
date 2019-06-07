@@ -1,0 +1,12 @@
+---
+{
+  "layout"	   : "pageLayout.hbs",
+  "title"      : "#name# - Development component",
+  "fsdId"      : "#name#",
+  "categories" : "components",
+  "description": "Development component",
+  "components" : "#name#",
+  "hiddenUX"   : true
+}
+---
+<sly data-sly-call="${lib.#name#_template @data=#name#Model}" />

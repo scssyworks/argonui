@@ -1,0 +1,14 @@
+{
+  "questions": [
+    {
+      "question": "Source directory name",
+      "defaultValue": "source",
+      "key": "source"
+    },
+    {
+      "question": "App directory name",
+      "defaultValue": "app",
+      "key": "app"
+    }
+  ]
+}
