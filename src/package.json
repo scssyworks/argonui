@@ -104,7 +104,8 @@
     "webpack": "^4.33.0",
     "webpack-chunk-rename-plugin": "^1.0.3",
     "webpack-cli": "^3.3.2",
-    "xmlbuilder": "^7.0.0"
+    "xmlbuilder": "^7.0.0",
+    "yargs": "^13.2.4"
   },
   "engines": {
     "node": ">=0.8.0"
