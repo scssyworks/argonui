@@ -216,16 +216,6 @@
     "common": "apps/settings/wcm/designs/argonui/clientlibs/common.publish/js/common.js",
     "default.en": "apps/settings/wcm/designs/argonui/clientlibs/default.en.publish/js/default.js"
   },
-  "createComponent": {
-    "componentsFolder": "source/templates/components",
-    "atomsFolder": "source/templates/atoms",
-    "moleculesFolder": "source/templates/molecules",
-    "importsTemplate": "ccTemplates/jsModuleImportTmp.txt",
-    "componentTemplate": "ccTemplates/classTmp.txt",
-    "testTemplate": "ccTemplates/testTmp.txt",
-    "pageTemplate": "ccTemplates/pageTmp.txt",
-    "importsJsFile": "source/scripts/bundle/imports.js"
-  },
   "watch": {
     "assemble": {
       "files": [

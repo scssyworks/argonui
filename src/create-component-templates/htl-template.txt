@@ -1,10 +1,10 @@
 ---
 {
   "layout"	   : "pageLayout.hbs",
-  "title"      : "#name# - Development component",
+  "title"      : "#name#",
   "fsdId"      : "#name#",
   "categories" : "components",
-  "description": "Development component",
+  "description": "Prototype",
   "components" : "#name#",
   "hiddenUX"   : true
 }

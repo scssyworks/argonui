@@ -22,5 +22,13 @@
   "bugs": {
     "url": "https://github.com/scssyworks/argonui/issues"
   },
-  "homepage": "https://github.com/scssyworks/argonui#readme"
+  "homepage": "https://github.com/scssyworks/argonui#readme",
+  "bin": {
+    "create-component": "./tools/createComponent.js"
+  },
+  "devDependencies": {
+    "fs-extra": "^8.0.1",
+    "inquirer": "^6.3.1",
+    "yargs": "^13.2.4"
+  }
 }
