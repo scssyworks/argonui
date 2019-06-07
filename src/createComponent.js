@@ -1,9 +1,8 @@
-const { wizard } = require('./ask');
+const inquirer = require('inquirer');
 const config = require('./config').createComponent;
 const fs = require('fs-extra');
 const { hasArgs } = require('./args');
 
-let targetFolder = 'components';
 let targetModule = 'component';
 if (hasArgs('atom')) {
   targetFolder = 'atoms';
@@ -15,8 +14,9 @@ if (hasArgs('atom')) {
 
 const questions = [
   {
-    question: `Enter ${targetModule} name\nRules: \n1. Name should start with capital or small case\n2. Name should not start with a number\n3. Name can contain an underscore\n:`,
-    key: "componentName"
+    message: `Enter ${targetModule} name\nRules: \n1. Name should start with capital or small case\n2. Name should not start with a number\n3. Name can contain an underscore\n:`,
+    name: "componentName",
+    type: "input"
   }
 ];
 
@@ -45,11 +45,11 @@ function createComponent(name) {
   console.log('\x1b[32m%s\x1b[0m', `${targetModule} ${name} has been created!`);
 }
 
-wizard({ questions })
-  .then(([data]) => {
+inquirer.prompt(questions)
+  .then(({ componentName }) => {
     if (
-      data.answer
-      && !(/^\d|[^A-Za-z0-9_]/).test(data.answer)
+      componentName
+      && !(/^\d|[^A-Za-z0-9_]/).test(componentName)
     ) {
       // Check if component already exists
       try {
@@ -66,10 +66,10 @@ wizard({ questions })
           fs.mkdirsSync(folder);
         }
         const componentList = fs.readdirSync(folder);
-        if (componentList.includes(data.answer)) {
-          console.log('\x1b[31m%s\x1b[0m', `${moduleName} with name ${data.answer} already exists!`);
+        if (componentList.includes(componentName)) {
+          console.log('\x1b[31m%s\x1b[0m', `${moduleName} with name ${componentName} already exists!`);
         } else {
-          createComponent(data.answer);
+          createComponent(componentName);
         }
       } catch (e) {
         console.log(e);

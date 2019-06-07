@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const path = require('path');
 const webpackConfig = require('./config').webpack;
 const { getArgs } = require('./args');
