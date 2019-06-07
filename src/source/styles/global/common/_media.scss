@@ -1,0 +1,21 @@
+// Media variables
+$v-desktop-max: 1440px !default;
+$v-desktop-l: 1200px !default;
+$v-desktop: 1024px !default;
+$v-tablet-l: 992px !default;
+$v-tablet: 768px !default;
+$v-mobile-maxwidth: 1023px !default;
+$v-mobile-l: 576px !default;
+$v-mobile: 320px !default;
+// Breakpoints
+$mobile: '(min-width: #{$v-mobile}) and (max-width: #{$v-mobile-maxwidth})'; // Usage => @media #{$mobile} { ... }
+$mobile-large: '(min-width: #{$v-mobile-l}) and (max-width: #{$v-mobile-maxwidth})'; // Usage => @media #{$mobile-large} { ... }
+$tablet: '(min-width: #{$v-tablet})'; // Usage => @media #{$tablet} { ... }
+$tablet-large: '(min-width: #{$v-tablet-l})'; // Usage => @media #{$tablet-large} { ... }
+$desktop: '(min-width: #{$v-desktop})'; // Usage => @media #{$desktop} { ... }
+$desktop-large: '(min-width: #{$v-desktop-l})'; // Usage => @media #{$desktop-large} { ... }
+// Breakpoints landscape
+$tablet-landscape: '#{$tablet} and (orientation: landscape)'; // Usage => @media #{$tablet-landscape} { ... }
+$tablet-large-landscape: '#{$tablet-large} and (orientation: landscape)'; // Usage => @media #{tablet-large-landscape}
+$mobile-landscape: '#{$mobile} and (orientation: landscape)'; // Usage => @media #{$mobile-landscape} { ... }
+$mobile-large-landscape: '#{$mobile-large} and (orientation: landscape)'; // Usage => @media #{$mobile-large-landscape} { ... }

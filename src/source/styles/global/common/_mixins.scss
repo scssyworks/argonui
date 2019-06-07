@@ -1,0 +1,175 @@
+// REM mixin wrappers
+@mixin margin($args) {
+    margin: convert-to-rem($args);
+}
+
+@mixin padding($args) {
+    padding: convert-to-rem($args);
+}
+
+@mixin margin-left($args) {
+    margin-left: convert-to-rem($args);
+}
+
+@mixin margin-right($args) {
+    margin-right: convert-to-rem($args);
+}
+
+@mixin margin-top($args) {
+    margin-top: convert-to-rem($args);
+}
+
+@mixin margin-bottom($args) {
+    margin-bottom: convert-to-rem($args);
+}
+
+@mixin padding-left($args) {
+    padding-left: convert-to-rem($args);
+}
+
+@mixin padding-right($args) {
+    padding-right: convert-to-rem($args);
+}
+
+@mixin padding-top($args) {
+    padding-top: convert-to-rem($args);
+}
+
+@mixin padding-bottom($args) {
+    padding-bottom: convert-to-rem($args);
+}
+
+@mixin font-size($args) {
+    font-size: convert-to-rem($args);
+}
+
+@mixin width($args) {
+    width: convert-to-rem($args);
+}
+
+@mixin height($args) {
+    height: convert-to-rem($args);
+}
+
+@mixin min-width($args) {
+    min-width: convert-to-rem($args);
+}
+
+@mixin min-height($args) {
+    min-height: convert-to-rem($args);
+}
+
+@mixin max-width($args) {
+    max-width: convert-to-rem($args);
+}
+
+@mixin max-height($args) {
+    max-height: convert-to-rem($args);
+}
+
+@mixin line-height($line-height, $font-size) {
+    line-height: calculate-line-height($line-height, $font-size);
+}
+
+@mixin letter-spacing($args) {
+    letter-spacing: convert-to-rem($args);
+}
+
+@mixin top($args) {
+    top: convert-to-rem($args);
+}
+
+@mixin left($args) {
+    left: convert-to-rem($args);
+}
+
+@mixin bottom($args) {
+    bottom: convert-to-rem($args);
+}
+
+@mixin right($args) {
+    right: convert-to-rem($args);
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin border-radius($radius) {
+    border-radius: convert-to-rem($radius);
+}
+
+@mixin border-width($args) {
+    border-width: convert-to-rem($args);
+}
+
+@mixin full-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin absolute-center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+// mixin ellipsis
+@mixin text-overflow-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// mixin for multiline ellipsis === -webkit-* only
+@mixin multiline-ellipsis($line-height, $lines) {
+    display: block;
+    display: -webkit-box;
+    max-height: $line-height*$lines;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+}
+
+// Vertical scroll touch
+@mixin vertical-scroll-touch {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+// Horizontal scroll touch
+@mixin horizontal-scroll-touch {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+// mixin for display flex
+@mixin display-flex {
+    display: table;
+    /* IE < 10, Opera *Presto* Desktop (Now dead) */
+    display: -webkit-box;
+    /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UCBrowser Android */
+    display: -moz-box;
+    /* Firefox 2 - 27 (2009 Spec), UCMini Android */
+    display: -ms-flexbox;
+    /* IE10 (2012 Syntax) */
+    display: -webkit-flex;
+    /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+    display: flex;
+    /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+}
+
+// mixin for position sticky
+@mixin position-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+}

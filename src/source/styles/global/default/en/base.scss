@@ -1,5 +1,5 @@
-// Styles framework imported from common
-@import './atoms';
-@import './molecules';
-@import './components';
-@import './typography';
+// Base SCSS file for common CSS
+@import '../../common/imports';
+@import '../../common/typography';
+@import '../../common/global';
+@import '../../common/utils';
