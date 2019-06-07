@@ -1,7 +1,7 @@
 {
   "name": "argonui",
   "version": "0.0.1",
-  "description": "Argon UI is a framework for front-end protototyping that integrates with AEM",
+  "description": "Argon UI is a framework for front-end protototyping in AEM",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
