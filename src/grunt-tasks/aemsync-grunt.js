@@ -1,4 +1,4 @@
-const config = require('../config.json');
+const config = require('../argon.config.js');
 module.exports = function (grunt) {
   var Pusher = require('aemsync').Pusher
   var path = require('path');

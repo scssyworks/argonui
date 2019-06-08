@@ -1,7 +1,7 @@
 // Generated on 2014-03-28 using generator-lessapp 0.4.9
 'use strict';
 
-var config = require("./config.json");
+var config = require("./argon.config.js");
 module.exports = function (grunt) {
 
   // Time how long tasks take. Can help when optimizing build times
@@ -11,9 +11,9 @@ module.exports = function (grunt) {
   require('load-grunt-config')(grunt, {
     data: {
       config: {
-        app: config.appFolder,
-        source: config.sourceFolder,
-        publish: config.publishFolder,
+        app: config.target,
+        source: config.source,
+        publish: config.clientlibPath,
         date: grunt.template.today('yyyy-mm-dd')
       },
     },

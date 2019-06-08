@@ -1,4 +1,4 @@
-const config = require('../config.json');
+const config = require('../argon.config.js');
 const options = {
   replaceTargetContentXml: true,
   useDummyContentXml: true,

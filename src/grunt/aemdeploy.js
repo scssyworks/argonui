@@ -1,4 +1,4 @@
-var config = require('../config.json');
+var config = require('../argon.config.js');
 module.exports = {
   options: {
     targets: [

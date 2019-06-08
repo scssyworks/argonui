@@ -1,8 +1,8 @@
 const path = require('path');
 const webpackConfig = require('./config').webpack;
-const { getArgs } = require('./args');
+const argv = require('yargs').argv;
 
-const mode = getArgs('mode') || 'development';
+const mode = argv.mode || 'development';
 
 module.exports = function (config) {
   config.set({

@@ -1,4 +1,4 @@
-var config = require('../config.json').copy;
+var config = require('../argon.config.js').copy;
 module.exports = {
   uxlibdemo: {
     files: config.uxlibdemo

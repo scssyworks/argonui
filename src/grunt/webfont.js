@@ -1,4 +1,4 @@
-var config = require('../config.json').webfont;
+var config = require('../argon.config.js').webfont;
 module.exports = {
   icons: {
     src: config.src,

@@ -1,5 +1,5 @@
 var path = require('path'),
-  config = require('../config.json'),
+  config = require('../argon.config.js'),
   files = config.assemble.pages.files;
 files.forEach(function (fileOption) {
   Object.assign(fileOption, {
