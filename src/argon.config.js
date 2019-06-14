@@ -7,6 +7,7 @@ const clientlibDist = `apps/settings/wcm/designs`;
 const projectName = `argonui`;
 
 module.exports = {
+    projectName,
     target,
     source,
     clientlibPath: `${target}/jcr_root/${clientlibDist}/${projectName}/clientlibs`,
@@ -154,10 +155,28 @@ module.exports = {
         cssChunkPath: `${clientlibDist}/${projectName}/clientlibs/[name].publish/css/[name].css`
     },
     // Remove chunk hash from clientlib files
-    clientlibs: {
+    chunkrename: {
         vendor: `${clientlibDist}/${projectName}/clientlibs/vendor.publish/js/vendor.js`,
         common: `${clientlibDist}/${projectName}/clientlibs/common.publish/js/common.js`,
         'default.en': `${clientlibDist}/${projectName}/clientlibs/default.en.publish/js/default.js`
+    },
+    // Clientlibs configuration
+    clientlibs: {
+        vendor: {
+            category: 'argonui.vendor',
+            basePath: `${clientlibDist}/${projectName}/clientlibs/vendor.publish`,
+            paths: [
+                `${clientlibDist}/${projectName}/clientlibs/vendor.publish`
+            ]
+        },
+        global: {
+            category: 'argonui.global',
+            basePath: `${clientlibDist}/${projectName}/clientlibs/global.publish`,
+            paths: [
+                `${clientlibDist}/${projectName}/clientlibs/global.publish`,
+                `${clientlibDist}/${projectName}/clientlibs/common.publish`,
+            ]
+        }
     },
     // Watch for changes
     watch: {
